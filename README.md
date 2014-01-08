@@ -7,7 +7,7 @@ To start the daemon simply run
     // Usage: autoreload [directory/file to watch]
     autoreload ~/workspace/myproject
     
-To setup the webpage you want to refresh add the following snippet (your host may differ depending on your individual setup)
+To setup the webpage you want to refresh add the following snippet (your host may differ depending on your individual setup). **NOTE:** this must be added to the bottom of webpage. before closing body tag.
 
     <script>
     (function(){
