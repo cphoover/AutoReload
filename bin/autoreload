@@ -1,0 +1,18 @@
+#!/usr/local/bin/node
+
+var port          = 1337,
+    io            = require('socket.io').listen(port),
+    fs            = require('fs'),
+    watchLocation = process.argv[2];
+
+if(fs.existsSync(watchLocation)){
+   fs.watch(watchLocation, {}, function(){
+        console.log('something happened');
+        io.sockets.emit("reload")
+   });
+    
+} else {
+    console.log("file location:" + watchLocation + " does not exist");
+    process.exit(1);
+}
+
