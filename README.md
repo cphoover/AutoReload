@@ -1,5 +1,7 @@
 #  AutoReload
 
+**NOTE:** this doesn't really work yet!
+
 AutoReload is a node.js auto refresher built atop socket.io. AutoReload watches for file system changes and refreshes a webpage that is connected to it. This allows front-end developers to see a live preview as they code.
 
 To start the daemon simply run 
